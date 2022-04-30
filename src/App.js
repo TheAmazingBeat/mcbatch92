@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import {Container, Box} from '@mui/material'
+import ImageGallery from 'react-image-gallery';
+import { photos } from './photos2';
+import Navbar from './Navbar';
 
+// const BasicRows = () => <Gallery photos={photos} />;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <div className="App">
+    //   <BasicRows/>
+    // </div>
+    <Container>
+      <Box>
+        <Navbar />
+      </Box>
+      <Box>
+        {/* <BasicRows/> */}
+        <ImageGallery items={photos}/>
+      </Box>
+    </Container>
   );
 }
 
